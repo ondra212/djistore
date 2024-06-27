@@ -1,0 +1,165 @@
+<html lang="zh-CN">
+
+<!-- Mirrored from cdn.djivideos.com/watch/8e6ef45a-6fd3-48d9-a90c-6e9df3cda55c?autoplay=true&loop=true&muted=true&poster=//stormsend1.djicdn.com/stormsend/uploads/537fad0a788542db26e6cc3ccf763c18.jpg by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jun 2024 15:24:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>web player</title>
+    
+    <link rel="stylesheet" href="../../sp-webfront.skypixel.com/jxplayer/static/player-08ec4b611f18f45dbf379ced.css?ver=202406271207" />
+    <style>
+        html, body, #mod_player {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="mod_player">
+
+</div>
+<script>
+    /*<![CDATA[*/
+    window.VIDEO_INFO = {
+        status: 0,
+        vid: '8e6ef45a-6fd3-48d9-a90c-6e9df3cda55c',
+        poster: 'https://us-cms-videos.dji.net/video_trans/2788425d71db4d1ea5196625d70814d8/2.jpg',
+        duration: 10,
+        historyStart: 0,
+        title: "",
+        formats: "mp4",
+        defaultTrack: null,
+        definitions: [],
+        defaultDefinition: '1',
+        tracks: []
+    };
+    if (window.VIDEO_INFO.poster) {
+        window.VIDEO_INFO.poster = window.VIDEO_INFO.poster.replace('http://', "//");
+        window.VIDEO_INFO.poster = window.VIDEO_INFO.poster.replace('https:///', "//");
+    }
+    var videoDefinitions = JSON.parse('[{\"type\":\"SD\",\"text\":\"480p\",\"src\":\"https://us-cms-videos.dji.net/video_trans/2788425d71db4d1ea5196625d70814d8/sd.mp4\"},{\"type\":\"HD\",\"text\":\"720p\",\"src\":\"https://us-cms-videos.dji.net/video_trans/2788425d71db4d1ea5196625d70814d8/720.mp4\"},{\"type\":\"FHD\",\"text\":\"1080p\",\"src\":\"https://us-cms-videos.dji.net/video_trans/2788425d71db4d1ea5196625d70814d8/1080.mp4\"},{\"type\":\"4K\",\"text\":\"4k\",\"src\":\"https://us-cms-videos.dji.net/video_trans/2788425d71db4d1ea5196625d70814d8/4k.mp4\"}]');
+    for (di in videoDefinitions) {
+        if (videoDefinitions[di]["src"]) {
+            videoDefinitions[di]["src"] = videoDefinitions[di]["src"].replace('http://', "//");
+            videoDefinitions[di]["src"] = videoDefinitions[di]["src"].replace('https:///', "//");
+        }
+    }
+    var videoTracks = JSON.parse('[]');
+    for (ci in videoTracks) {
+        if (videoTracks[ci]["src"]) {
+            videoTracks[ci]["src"] = videoTracks[ci]["src"].replace('http://', "//");
+            videoTracks[ci]["src"] = videoTracks[ci]["src"].replace('https:///', "//");
+        }
+    }
+    window.VIDEO_INFO.definitions = videoDefinitions;
+    window.VIDEO_INFO.tracks = videoTracks;
+    /*]]>*/
+</script>
+<div id="logger"></div>
+<script src="../../sp-webfront.skypixel.com/jxplayer/static/player-08ec4b611f18f45dbf379ced.js?ver=202406271207"></script>
+<script>
+    /*<![CDATA[*/
+    function getUrlParam(p, u) {
+        u = u || document.location.toString();
+        var reg = new RegExp('(^|&|\\\\?)' + p + '=([^&]*)(&|$|#)');
+        var r = u.match(reg);
+        return r ? r[2] : '';
+    }
+    window.onerror = function (message, source, lineno, colno, error) {
+        console.log(message, source, lineno, colno, error)
+    }
+    function initPlayer() {
+        window.VIDEO_INFO = window.VIDEO_INFO || {};
+        window.VIDEO_INFO.vid = window.VIDEO_INFO.vid;
+        window.VIDEO_INFO.poster = getUrlParam('poster') || window.VIDEO_INFO.poster;
+        window.VIDEO_INFO.title = getUrlParam('title') || window.VIDEO_INFO.title;
+        // window.VIDEO_INFO.defaultTrack = getUrlParam('language') || window.VIDEO_INFO.defaultTrack;
+        window.VIDEO_INFO.activeTrack = getUrlParam('language') || window.VIDEO_INFO.activeTrack
+        try {
+            window.localStorage.setItem('definition', getUrlParam('definition') || window.VIDEO_INFO.defaultDefinition)
+        } catch (e) {
+            console.error(e)
+        }
+
+        var autoplay = getUrlParam('autoplay');
+        autoplay = (autoplay === '0' || autoplay === 'false') ? 0 : 1;
+        var muted = getUrlParam('muted');
+        muted = (muted === '1' || muted === 'true') ? 1 : 0;
+        var params = {
+            autoplay: autoplay,
+            loop: getUrlParam('loop'),
+            source: window.VIDEO_INFO,
+            disabledChildren: ['rightClick'],
+            muted: muted
+        };
+        var disableControls = getUrlParam('disctrl');
+        disableControls = (disableControls == 1 || disableControls === 'true') ? 1 : 0;
+        if (disableControls) {
+            params.disabledChildren = [
+                'controls',
+                'rightClick'
+            ];
+        }
+        //设置播放器
+        var player = jxplayer('mod_player').setup(params);
+    }
+    document.addEventListener("DOMContentLoaded", initPlayer);
+    /*]]>*/
+</script>
+<script>
+    /*<![CDATA[*/
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+    function checkCookie(){
+        var cookieEnabled = navigator.cookieEnabled;
+        if (!cookieEnabled){ 
+            document.cookie = "testcookie";
+            cookieEnabled = document.cookie.indexOf("testcookie")!=-1;
+        }
+        return cookieEnabled;
+    }
+
+    if (checkCookie()) {
+        ga('create', 'UA-145295232-1', {
+            'cookieFlags': 'SameSite=None; Secure'
+        });
+    } else {
+        try {
+            var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+
+            ga('create', 'UA-145295232-1', {
+                'storage': 'none',
+                'clientId': window.localStorage.getItem(GA_LOCAL_STORAGE_KEY)
+            });
+            ga(function(tracker) {
+                window.localStorage.setItem(GA_LOCAL_STORAGE_KEY, tracker.get('clientId'));
+            });
+        } catch (e) {
+            ga('create', 'UA-145295232-1', {
+                'storage': 'none'
+            });
+        }
+    }
+
+    ga('send', 'pageview');
+
+    /*]]>*/
+</script>
+
+</body>
+
+<!-- Mirrored from cdn.djivideos.com/watch/8e6ef45a-6fd3-48d9-a90c-6e9df3cda55c?autoplay=true&loop=true&muted=true&poster=//stormsend1.djicdn.com/stormsend/uploads/537fad0a788542db26e6cc3ccf763c18.jpg by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jun 2024 15:24:25 GMT -->
+</html>

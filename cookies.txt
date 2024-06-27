@@ -1,0 +1,11 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.djishop.cz	TRUE	/	FALSE	1999999999	skitsession	begl7gko2cadk832jd4n8rllq0
+www.djishop.cz	TRUE	/	FALSE	1999999999	sid_key	oxid
+www.djishop.cz	TRUE	/	FALSE	1999999999	oxvoucheraddcount	1
+cdn.djivideos.com	TRUE	/	FALSE	1999999999	acw_tc	2ff6029a17195002545757632e0ff57baebbaca54e58117cce07c6701b
+www.djishop.cz	TRUE	/	FALSE	1999999999	sid	jp8l4dls3uom4o216pfsinpvjo
+www.djishop.cz	TRUE	/	FALSE	1999999999	language	2
+www.djishop.cz	TRUE	/	FALSE	1999999999	bcztracking	aaa
+www.djishop.cz	TRUE	/	FALSE	1999999999	bcztracking2	YTo3OntzOjI6ImlwIjtzOjE0OiIxNzIuNjguMjI0LjIxMyI7czoxMzoicG9jZXRfbmF2c3RldiI7aToxO3M6MTc6InBvc2xlZG5pX25hdnN0ZXZhIjtpOjE3MTk0OTk5NjQ7czo1OiJlbWFpbCI7TjtzOjE3OiJha3R1YWxuaV9uYXZzdGV2YSI7aToxNzE5NTAzMjcwO3M6NzoibWFpbGluZyI7aTowO3M6MTM6InBvY2V0X3N0cmFuZWsiO2k6MjQ5OTt9
+
